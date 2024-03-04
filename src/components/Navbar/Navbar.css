@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     border: 0;
@@ -42,7 +42,7 @@ html, body, div{
     color: white;
 } */
 
-.topnav-right {
+/* .topnav-right {
     float: right;
     margin-top: 5px;
 }
@@ -50,4 +50,33 @@ html, body, div{
 .topnav-right p {
     font-size: 16px;
     margin: 10px;
+}  */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    background-color: #333;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.login a {
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }

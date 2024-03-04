@@ -1,19 +1,68 @@
-import { createContext, useState } from 'react'
+import { createContext, useContext, useEffect, useState} from 'react'
 import { Outlet } from 'react-router-dom'
 import Navbar from "../Navbar/Navbar"
 import Footer from "../Footer/Footer"
+import axios from 'axios'
 
 export const UserContext = createContext()
 
-const Layout = () => {
-    const [user, setUser] = useState("Me Mee") 
-    return (
-        <UserContext.Provider value={user}>
-            <Navbar />
-            <Outlet />
-            <Footer />
-        </UserContext.Provider>
-    )
-}
+// const Layout = () => {
+//     const [user, setUser] = useState("my name") 
+//     return (
+//         <UserContext.Provider value={user}>
+//             <Navbar />
+//             <Outlet />
+//             <Footer />
+//         </UserContext.Provider>
+//     )
+// }
 
-export default Layout;
+// export default Layout;
+
+const UserProfileContext = createContext();
+
+const Layout = () => {
+  const [userProfile, setUserProfile] = useState(null);
+  const getUserProfile = async () => {
+    try {
+      const token = window.localStorage.getItem('token');
+      const response = await axios.get(
+        'https://bubble-tea-cafe-api-production.up.railway.app/api/auth/profile',
+        {
+          headers: {
+            Authorization: `${token}`,
+          },
+        }
+      );
+      setUserProfile(response.data.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    if (!userProfile) {
+      getUserProfile();
+    }
+  }, [userProfile]);
+
+  return (
+    <div>
+      <UserProfileContext.Provider value={userProfile}>
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </UserProfileContext.Provider>
+    </div>
+  );
+};
+
+const useUserProfile = () => {
+  const context = useContext(UserProfileContext);
+  if (context === undefined) {
+    console.log('useUserProfile must be used within a UserProfileProvider');
+  }
+  return context;
+};
+
+export { Layout, useUserProfile };

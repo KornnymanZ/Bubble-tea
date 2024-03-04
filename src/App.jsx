@@ -1,9 +1,13 @@
 import { BrowserRouter, Route, Routes} from "react-router-dom"
-import Layout from './components/layouts/Layout'
+import "./App.css"
+import { Layout } from './components/layouts/Layout'
 import Homepage from './components/Pages/Homepage'
 import Aboutpage from './components/Pages/Aboutpage'
 import Newspage from "./components/Pages/Newspage"
 import Contactpage from "./components/Pages/Contactpage"
+import LoginPage from "./components/Pages/Loginpage"
+import ProfilePage from "./components/Pages/Profilepage"
+
 
 
 export default function App() {
@@ -16,7 +20,8 @@ export default function App() {
           <Route path="/news" element={<Newspage />} />
           <Route path="/contact" element={<Contactpage />} />
           <Route path="/about" element={<Aboutpage />} />
-        
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
         </Route>
         
       </Routes>

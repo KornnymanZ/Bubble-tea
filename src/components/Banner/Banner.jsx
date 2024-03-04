@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import './Banner.css'
 import { useContext } from 'react'
-import {UserContext} from '../layouts/Layout'
+import { UserContext } from '../layouts/Layout'
 
 
 // export default function Banner(){
@@ -64,7 +64,9 @@ function Banner({ name }) {
                 <svg className="circle-a" height="160" width="160">
                     <circle cx="80" cy="80" r="80 />" />
                 </svg>
-
+                <div className="col-xs-12">
+                    <p>{name}</p>
+                </div>
             </div>
         </aside>
     )
