@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+  }
+
+.bgcontact{
+    background-image: url('https://img.freepik.com/free-photo/coffee-beans-top-view-white-background-space-text_176474-5028.jpg?w=996&t=st=1705936772~exp=1705937372~hmac=3733e1200d883e6e39fcd7244303564351a4b74cb85065acf48ee014a56a26a5');
+    height: 720px;
+    background-position: center;
+    background-size: cover;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }

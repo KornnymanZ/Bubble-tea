@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+img {
+  margin-left: 105px;
+  max-width: 600px;
+  max-height: 200px;
+  display: flex;
+  overflow: scroll;
+  float: left;
+  margin-left: auto;
+}
+
+img.joe {
+  margin-left: 105px;
+  max-width: 600px;
+  max-height: 200px;
+  display: flex;
+  overflow: scroll;
+  float: left;
+  margin-left: auto;
+  padding-left: 60px;
+}
+
+h2 {
+  text-align: center;
+  border-style: groove;
+  width: 300px;
+  height: 20px;
+  margin-top: -80px;
+  margin-left: 30px;
+  padding-bottom: 12px;
+  overflow: hidden;
+  font-size: 20px;
+  font-family: monospace;
+}
+
+b{
+  width: 100%;
+  padding-left: 130px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 20px;
+  font-family: monospace;
+  color: blue;
+}
+
+p{
+  margin-top: 25px;
+  overflow: hidden;
+  width: 100%;
+  padding-left: 60px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  text-align: center;
+  font-family: monospace;
+}
+
+p.joe{
+  margin-top: 25px;
+  overflow: hidden;
+  width: 100%;
+  padding-left: 60px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  text-align: center;
+  font-family: monospace;
+  
+}
+
+p.sw{
+  margin-top: 25px;
+  overflow: hidden;
+  width: 100%;
+  padding-left: 50px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  text-align: center;
+  font-family: monospace;
+}
+
+
+.productcard{
+    display: grid;
+    grid-auto-flow: column;
+    padding-left: 50px;
+    max-width: 200px;
+    max-height: 300px;
+    overflow: auto;
+    padding-top: 100px;
+    
+
+}
