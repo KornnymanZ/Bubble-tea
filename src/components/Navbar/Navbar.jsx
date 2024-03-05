@@ -33,6 +33,8 @@
 import { useUserProfile } from '../layouts/Layout';
 import './Navbar.css';
 
+
+
 export default function Navbar() {
   const userProfile = useUserProfile();
   console.log('userProfile', userProfile);
@@ -49,12 +51,27 @@ export default function Navbar() {
           <li>
             <a href='/about'>About</a>
           </li>
+
           <div className='login'>
+    
+            {userProfile ? (
+              <a onClick={() => localStorage.clear()}href = "/">Logout</a>
+            ) : (
+              <p></p>
+ 
+            )}
+            </div>
+         
+          <div className='login'>
+    
             {userProfile ? (
               <a href='/profile'>{userProfile.username}</a>
+              
             ) : (
               <a href='/login'>Login</a>
+              
             )}
+            
           </div>
         </ul>
       </div>

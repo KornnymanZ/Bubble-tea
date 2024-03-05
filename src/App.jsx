@@ -7,13 +7,18 @@ import Newspage from "./components/Pages/Newspage"
 import Contactpage from "./components/Pages/Contactpage"
 import LoginPage from "./components/Pages/Loginpage"
 import ProfilePage from "./components/Pages/Profilepage"
+import RoleBasedComponent from "./RoleBasedComponent"
 
 
 
 export default function App() {
   return (
+    <RoleBasedComponent role={"staff"}
+    supportedRoles={["staff", "support_staff", "customer"]}>
+      
     <BrowserRouter>
       <Routes>
+        
         
         <Route element={<Layout />}>
           <Route path="/" element={<Homepage />} />
@@ -27,5 +32,6 @@ export default function App() {
       </Routes>
     
   </BrowserRouter>
+  </RoleBasedComponent>
   )
 }
