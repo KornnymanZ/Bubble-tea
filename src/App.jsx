@@ -7,6 +7,7 @@ import Newspage from "./components/Pages/Newspage"
 import Contactpage from "./components/Pages/Contactpage"
 import LoginPage from "./components/Pages/Loginpage"
 import ProfilePage from "./components/Pages/Profilepage"
+import Productpage from "./components/Pages/Productpage"
 import RoleBasedComponent from "./RoleBasedComponent"
 
 
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/about" element={<Aboutpage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/product" element={<Productpage />} />
         </Route>
         
       </Routes>

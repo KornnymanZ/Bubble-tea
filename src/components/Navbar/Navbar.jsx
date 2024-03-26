@@ -51,6 +51,9 @@ export default function Navbar() {
           <li>
             <a href='/about'>About</a>
           </li>
+          <li>
+            <a href='/product'>Products</a>
+          </li>
 
           <div className='login'>
     
