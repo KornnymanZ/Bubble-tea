@@ -8,6 +8,8 @@ import Contactpage from "./components/Pages/Contactpage"
 import LoginPage from "./components/Pages/Loginpage"
 import ProfilePage from "./components/Pages/Profilepage"
 import Productpage from "./components/Pages/Productpage"
+// import Cartpage from "./components/Pages/Cartpage"
+import Editpage from "./components/Pages/Editpage"
 import RoleBasedComponent from "./RoleBasedComponent"
 
 
@@ -20,7 +22,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         
-        
+
         <Route element={<Layout />}>
           <Route path="/" element={<Homepage />} />
           <Route path="/news" element={<Newspage />} />
@@ -29,6 +31,8 @@ export default function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/product" element={<Productpage />} />
+          {/* <Route path="/cart" element={<Cartpage />} /> */}
+          <Route path="/edit" element={<Editpage />} />
         </Route>
         
       </Routes>

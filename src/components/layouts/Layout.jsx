@@ -6,19 +6,6 @@ import axios from 'axios'
 
 export const UserContext = createContext()
 
-// const Layout = () => {
-//     const [user, setUser] = useState("my name") 
-//     return (
-//         <UserContext.Provider value={user}>
-//             <Navbar />
-//             <Outlet />
-//             <Footer />
-//         </UserContext.Provider>
-//     )
-// }
-
-// export default Layout;
-
 const UserProfileContext = createContext();
 
 const Layout = () => {

@@ -4,6 +4,11 @@ import './Productpage.css';
 
 export default function HomePage() {
     const [menus, setMenus] = useState([]);
+
+    const AddtoCart = async () =>{
+      axios.post('https://bubble-tea-cafe-api-production.up.railway.app/api/auth/add-to-cart');
+     
+    }
   
     const fetcProduct = async () => {
       const response = await axios.get(
@@ -14,7 +19,7 @@ export default function HomePage() {
     };
   
     useEffect(() => {
-      fetcProduct();
+      fetcProduct(); AddtoCart();
     }, []);
     return (
       <div className='grid'>
@@ -26,7 +31,7 @@ export default function HomePage() {
               <p>
                 {menu.category}, {menu.price} Bath
               </p>
-              <button>Add Product to Cart</button>
+              <button onClick={AddtoCart}>Add Product to Cart</button>
             </div>
           </article>
         ))}

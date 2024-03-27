@@ -1,4 +1,4 @@
-import '/Users/apple/Desktop/vite-project/src/App.css'
+import "../../App.css";
 import { useState } from 'react'
 import HomeBackground from '../BGHomepage/BGHomepage'
 import BannerHome from '../BannerHome/BannerHome'
@@ -11,7 +11,7 @@ return (
     <div className ="bgimg">
         
         <BannerHome />
-        <Productcard />
+        {/* <Productcard /> */}
 
 
     </div>

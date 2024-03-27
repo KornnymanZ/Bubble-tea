@@ -33,8 +33,6 @@
 import { useUserProfile } from '../layouts/Layout';
 import './Navbar.css';
 
-
-
 export default function Navbar() {
   const userProfile = useUserProfile();
   console.log('userProfile', userProfile);
@@ -54,7 +52,12 @@ export default function Navbar() {
           <li>
             <a href='/product'>Products</a>
           </li>
-
+          <li>
+            <a href='/cart'>Cart</a>
+          </li>
+          <li>
+            <a href='/edit'>Edit Menu</a>
+          </li>
           <div className='login'>
     
             {userProfile ? (
